@@ -138,6 +138,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		071EED8421BF9C010079AEEB /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				80450CD521B3E06800611C65 /* Coordinator.swift */,
+				8031C15121BCF99D0066394B /* Exceptions.swift */,
+				806114B621BC65090025A598 /* Navigation.swift */,
+				806114B421BBFB1F0025A598 /* SwizzleUIViewController.swift */,
+				806114B221BBF1800025A598 /* UINavigationViewController+RootViewController.swift */,
+				8031C14F21BCF67F0066394B /* UIViewController+Rx.swift */,
+				80450CD121B3D02E00611C65 /* ViewModel.swift */,
+				806114B821BC6DF00025A598 /* Weak.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		80450CCA21B3CD2A00611C65 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,14 +193,7 @@
 			children = (
 				80F8DB1E21BDC1130051900E /* AppFoundation.h */,
 				80F8DB1F21BDC1130051900E /* Info.plist */,
-				80450CD521B3E06800611C65 /* Coordinator.swift */,
-				8031C15121BCF99D0066394B /* Exceptions.swift */,
-				806114B621BC65090025A598 /* Navigation.swift */,
-				806114B421BBFB1F0025A598 /* SwizzleUIViewController.swift */,
-				806114B221BBF1800025A598 /* UINavigationViewController+RootViewController.swift */,
-				8031C14F21BCF67F0066394B /* UIViewController+Rx.swift */,
-				80450CD121B3D02E00611C65 /* ViewModel.swift */,
-				806114B821BC6DF00025A598 /* Weak.swift */,
+				071EED8421BF9C010079AEEB /* Core */,
 			);
 			path = AppFoundation;
 			sourceTree = "<group>";
