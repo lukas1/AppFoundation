@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07B9EA1B21C79F9600571897 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80450CD321B3D9CF00611C65 /* Dependencies.swift */; };
+		07E22EC121C78DF000D2884E /* StyledLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E22EC021C78DF000D2884E /* StyledLabel.swift */; };
+		07E22EC321C78E1000D2884E /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E22EC221C78E1000D2884E /* Styles.swift */; };
+		07E22EC621C78F3400D2884E /* StringConvertibleMembers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E22EC521C78F3400D2884E /* StringConvertibleMembers.swift */; };
+		07E22EC921C78FFA00D2884E /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E22EC721C78FBE00D2884E /* Styles.swift */; };
+		07E22ECD21C7938A00D2884E /* StyledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E22ECC21C7938A00D2884E /* StyledButton.swift */; };
 		80450CCC21B3CF5100611C65 /* FirstViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80450CCB21B3CF5100611C65 /* FirstViewModel.swift */; };
-		80450CD421B3D9CF00611C65 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80450CD321B3D9CF00611C65 /* Dependencies.swift */; };
 		80450CD821B45E8000611C65 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80450CD721B45E8000611C65 /* SecondViewController.swift */; };
 		806114B121BBB2630025A598 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806114B021BBB2630025A598 /* ThirdViewController.swift */; };
 		806114BC21BC783A0025A598 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 806114BA21BC78390025A598 /* RxCocoa.framework */; };
@@ -81,6 +86,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		07E22EC021C78DF000D2884E /* StyledLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledLabel.swift; sourceTree = "<group>"; };
+		07E22EC221C78E1000D2884E /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		07E22EC521C78F3400D2884E /* StringConvertibleMembers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringConvertibleMembers.swift; sourceTree = "<group>"; };
+		07E22EC721C78FBE00D2884E /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		07E22ECC21C7938A00D2884E /* StyledButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyledButton.swift; sourceTree = "<group>"; };
 		8031C14F21BCF67F0066394B /* UIViewController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
 		8031C15121BCF99D0066394B /* Exceptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exceptions.swift; sourceTree = "<group>"; };
 		80450CCB21B3CF5100611C65 /* FirstViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewModel.swift; sourceTree = "<group>"; };
@@ -153,11 +163,30 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
+		07E22EBF21C78DD200D2884E /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				07E22ECC21C7938A00D2884E /* StyledButton.swift */,
+				07E22EC021C78DF000D2884E /* StyledLabel.swift */,
+				07E22EC221C78E1000D2884E /* Styles.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		07E22EC421C78F3400D2884E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				07E22EC521C78F3400D2884E /* StringConvertibleMembers.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		80450CCA21B3CD2A00611C65 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
 				80F8DB0A21BD98600051900E /* Contracts.swift */,
 				80450CD321B3D9CF00611C65 /* Dependencies.swift */,
+				07E22EC721C78FBE00D2884E /* Styles.swift */,
 				80F8DB1021BDA3670051900E /* First Screen */,
 				80F8DB1121BDA3790051900E /* Second Screen */,
 				80F8DB1221BDA38C0051900E /* Third Screen */,
@@ -194,6 +223,8 @@
 				80F8DB1E21BDC1130051900E /* AppFoundation.h */,
 				80F8DB1F21BDC1130051900E /* Info.plist */,
 				071EED8421BF9C010079AEEB /* Core */,
+				07E22EBF21C78DD200D2884E /* Styles */,
+				07E22EC421C78F3400D2884E /* Utils */,
 			);
 			path = AppFoundation;
 			sourceTree = "<group>";
@@ -366,11 +397,12 @@
 			files = (
 				80F8DB0921BD97FA0051900E /* FirstCoordinator.swift in Sources */,
 				80F8DB0D21BDA2720051900E /* SecondViewModel.swift in Sources */,
+				07E22EC921C78FFA00D2884E /* Styles.swift in Sources */,
+				07B9EA1B21C79F9600571897 /* Dependencies.swift in Sources */,
 				80450CD821B45E8000611C65 /* SecondViewController.swift in Sources */,
 				806114B121BBB2630025A598 /* ThirdViewController.swift in Sources */,
 				80F8DB1621BDA4580051900E /* ThirdCoordinator.swift in Sources */,
 				80F8DB0B21BD98600051900E /* Contracts.swift in Sources */,
-				80450CD421B3D9CF00611C65 /* Dependencies.swift in Sources */,
 				80450CCC21B3CF5100611C65 /* FirstViewModel.swift in Sources */,
 				80B6A81621986270003E868C /* FirstViewController.swift in Sources */,
 				80F8DB0F21BDA2ED0051900E /* SecondCoordinator.swift in Sources */,
@@ -385,12 +417,16 @@
 			files = (
 				80F8DB2A21BDC1590051900E /* Navigation.swift in Sources */,
 				80F8DB2B21BDC15C0051900E /* SwizzleUIViewController.swift in Sources */,
+				07E22EC621C78F3400D2884E /* StringConvertibleMembers.swift in Sources */,
 				80F8DB2821BDC1510051900E /* Coordinator.swift in Sources */,
 				80F8DB2C21BDC1600051900E /* UINavigationViewController+RootViewController.swift in Sources */,
+				07E22EC121C78DF000D2884E /* StyledLabel.swift in Sources */,
+				07E22ECD21C7938A00D2884E /* StyledButton.swift in Sources */,
 				80F8DB2D21BDC1630051900E /* UIViewController+Rx.swift in Sources */,
 				80F8DB2F21BDC1690051900E /* Weak.swift in Sources */,
 				80F8DB2921BDC1560051900E /* Exceptions.swift in Sources */,
 				80F8DB2E21BDC1660051900E /* ViewModel.swift in Sources */,
+				07E22EC321C78E1000D2884E /* Styles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
