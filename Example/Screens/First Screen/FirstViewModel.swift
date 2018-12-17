@@ -8,7 +8,7 @@ struct FirstViewModel {
 }
 
 extension FirstViewModel : ViewModel {
-    func colectIntents(intents: FirstIntents) -> CompositeDisposable {
+    func collectIntents(intents: FirstIntents) -> CompositeDisposable {
         return CompositeDisposable(disposables: [
             Single.just(try! state.value()).subscribe(onSuccess: { prevState in
                 self.nextState {

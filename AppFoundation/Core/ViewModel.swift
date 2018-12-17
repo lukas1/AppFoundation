@@ -6,7 +6,7 @@ public protocol ViewModel {
     associatedtype Intents
     var events: PublishSubject<FoundationEvent> { get }
     var state: BehaviorSubject<State> { get }
-    func colectIntents(intents: Intents) -> CompositeDisposable
+    func collectIntents(intents: Intents) -> CompositeDisposable
 }
 
 public extension ViewModel {

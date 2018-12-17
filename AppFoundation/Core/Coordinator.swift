@@ -37,7 +37,7 @@ public extension VMMCoordinator {
                     })
                     .disposed(by: vc.disposeBag)
                 model.state.subscribe(onNext: { [weak myViewController] in myViewController?.render(state: $0) }).disposed(by: vc.disposeBag)
-                model.colectIntents(intents: vc.intents).disposed(by: vc.disposeBag)
+                model.collectIntents(intents: vc.intents).disposed(by: vc.disposeBag)
             })
             .disposed(by: myViewController.disposeBag)
 

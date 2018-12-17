@@ -9,7 +9,7 @@ struct ThirdViewModel {
 }
 
 extension ThirdViewModel : ViewModel {
-    func colectIntents(intents: ThirdIntents) -> CompositeDisposable {
+    func collectIntents(intents: ThirdIntents) -> CompositeDisposable {
         return CompositeDisposable(disposables: [
             intents.buttonClicks.subscribe(onNext: { self.navigateBack() }),
             Single.just(thirdScreenText).subscribe(onSuccess: { self.state.onNext($0) })

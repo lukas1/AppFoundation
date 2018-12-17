@@ -8,7 +8,7 @@ struct SecondViewModel {
 }
 
 extension SecondViewModel : ViewModel {
-    func colectIntents(intents: SecondIntents) -> CompositeDisposable {
+    func collectIntents(intents: SecondIntents) -> CompositeDisposable {
         return CompositeDisposable(disposables: [
             intents.buttonClicks.subscribe(onNext: { self.navigatePerformSegue(segueIdentifier: SecondCoordinatorSegues.second) }),
             Single.just(dependency.dependencyValue).subscribe(onSuccess: { self.state.onNext($0) })
