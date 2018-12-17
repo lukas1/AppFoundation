@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		07B9EA1B21C79F9600571897 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80450CD321B3D9CF00611C65 /* Dependencies.swift */; };
+		07B9EA1D21C7A15A00571897 /* Localizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B9EA1C21C7A15A00571897 /* Localizations.swift */; };
 		07E22EC121C78DF000D2884E /* StyledLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E22EC021C78DF000D2884E /* StyledLabel.swift */; };
 		07E22EC321C78E1000D2884E /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E22EC221C78E1000D2884E /* Styles.swift */; };
 		07E22EC621C78F3400D2884E /* StringConvertibleMembers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E22EC521C78F3400D2884E /* StringConvertibleMembers.swift */; };
@@ -86,6 +87,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		07B9EA1C21C7A15A00571897 /* Localizations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizations.swift; sourceTree = "<group>"; };
 		07E22EC021C78DF000D2884E /* StyledLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledLabel.swift; sourceTree = "<group>"; };
 		07E22EC221C78E1000D2884E /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		07E22EC521C78F3400D2884E /* StringConvertibleMembers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringConvertibleMembers.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 		07E22EC421C78F3400D2884E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				07B9EA1C21C7A15A00571897 /* Localizations.swift */,
 				07E22EC521C78F3400D2884E /* StringConvertibleMembers.swift */,
 			);
 			path = Utils;
@@ -425,6 +428,7 @@
 				80F8DB2D21BDC1630051900E /* UIViewController+Rx.swift in Sources */,
 				80F8DB2F21BDC1690051900E /* Weak.swift in Sources */,
 				80F8DB2921BDC1560051900E /* Exceptions.swift in Sources */,
+				07B9EA1D21C7A15A00571897 /* Localizations.swift in Sources */,
 				80F8DB2E21BDC1660051900E /* ViewModel.swift in Sources */,
 				07E22EC321C78E1000D2884E /* Styles.swift in Sources */,
 			);

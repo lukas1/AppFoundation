@@ -1,5 +1,5 @@
 @IBDesignable
-open class StyledLabel<S: LabelStyles>: UILabel, StyledUIElement {
+open class StyledLabel<S: LabelStyles>: UILabel, StyledUIElement, XIBLocalizable {
     private var style: LabelStyle? {
         didSet {
             updateStyle()
@@ -9,6 +9,12 @@ open class StyledLabel<S: LabelStyles>: UILabel, StyledUIElement {
     @IBInspectable public var xibStyleName: String? {
         didSet {
             style = xibStyleName.flatMap { S.init().member(from: $0) }
+        }
+    }
+
+    @IBInspectable public var xibLocKey: String? {
+        didSet {
+            text = xibLocKey?.localized
         }
     }
     
