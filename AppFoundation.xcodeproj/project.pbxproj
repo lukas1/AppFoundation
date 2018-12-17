@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0746DC7C21C7E8420052487F /* UIStoryBoardSegueExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0746DC7B21C7E8420052487F /* UIStoryBoardSegueExt.swift */; };
 		07B9EA1B21C79F9600571897 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80450CD321B3D9CF00611C65 /* Dependencies.swift */; };
 		07B9EA1D21C7A15A00571897 /* Localizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B9EA1C21C7A15A00571897 /* Localizations.swift */; };
 		07B9EA2A21C7A30000571897 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07B9EA2C21C7A30000571897 /* Localizable.strings */; };
@@ -88,6 +89,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0746DC7B21C7E8420052487F /* UIStoryBoardSegueExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryBoardSegueExt.swift; sourceTree = "<group>"; };
 		07B9EA1C21C7A15A00571897 /* Localizations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizations.swift; sourceTree = "<group>"; };
 		07B9EA2D21C7A30300571897 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		07B9EA2E21C7A30C00571897 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 			children = (
 				07B9EA1C21C7A15A00571897 /* Localizations.swift */,
 				07E22EC521C78F3400D2884E /* StringConvertibleMembers.swift */,
+				0746DC7B21C7E8420052487F /* UIStoryBoardSegueExt.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				80F8DB2921BDC1560051900E /* Exceptions.swift in Sources */,
 				07B9EA1D21C7A15A00571897 /* Localizations.swift in Sources */,
 				80F8DB2E21BDC1660051900E /* ViewModel.swift in Sources */,
+				0746DC7C21C7E8420052487F /* UIStoryBoardSegueExt.swift in Sources */,
 				07E22EC321C78E1000D2884E /* Styles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

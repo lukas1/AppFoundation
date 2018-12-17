@@ -12,7 +12,7 @@ struct FirstCoordinator: VMMCoordinator {
 extension FirstCoordinator : SegueHandler {
     func coordinator(for segue: UIStoryboardSegue, sender: Any?) -> Coordinator? {
         switch segue.identifier ?? "" {
-        case FirstCoordinatorSegues.first.rawValue: return SecondCoordinator(viewController: segue.destination as! SecondViewController)
+        case FirstCoordinatorSegues.first.rawValue: return SecondCoordinator(viewController: segue.destination())
         default: return nil
         }
     }
