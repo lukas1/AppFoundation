@@ -43,15 +43,19 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="xibStyleName" value="title"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFV-3k-sU7">
-                                <rect key="frame" x="164.5" y="364.5" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFV-3k-sU7" customClass="AppButton" customModule="AppFoundationExample" customModuleProvider="target">
+                                <rect key="frame" x="165" y="364.5" width="45" height="30"/>
                                 <state key="normal" title="Button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="button"/>
+                                </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QIC-vW-lX1" customClass="AppButton" customModule="AppFoundationExample" customModuleProvider="target">
-                                <rect key="frame" x="140.5" y="94" width="94" height="44"/>
+                                <rect key="frame" x="144.5" y="94" width="86" height="44"/>
                                 <state key="normal" title="Random"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="xibStyleName" value="basic"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="random"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9e-B9-x8o" customClass="AppLabel" customModule="AppFoundationExample" customModuleProvider="target">
