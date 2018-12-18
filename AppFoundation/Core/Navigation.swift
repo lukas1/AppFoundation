@@ -15,7 +15,7 @@ public protocol PrepareForSegue {
     var segueHandler: SegueHandler? { get }
 }
 
-public enum NavigationEvent: FoundationEvent {
+public enum NavigationEvent: FoundationEvent, Equatable {
     case performSegue(String) // identifier
     case pop(Bool) // animated
 }
