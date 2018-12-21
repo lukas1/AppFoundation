@@ -22,6 +22,13 @@ open class StyledButton<S: ButtonStyles>: UIButton, StyledUIElement, XIBLocaliza
         if let style = style {
             titleLabel?.font = style.font
             tintColor = style.color
+            backgroundColor = style.backgroundColor
+            contentEdgeInsets = style.contentEdgeInsets
+            layer.cornerRadius = style.cornerRadius
+            if let borderColor = style.borderColor {
+                layer.borderWidth = style.borderWidth
+                layer.borderColor = borderColor.cgColor
+            }
         }
     }
 }

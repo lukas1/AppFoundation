@@ -44,10 +44,11 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFV-3k-sU7" customClass="AppButton" customModule="AppFoundationExample" customModuleProvider="target">
-                                <rect key="frame" x="165" y="364.5" width="45" height="30"/>
+                                <rect key="frame" x="30" y="364.5" width="315" height="51"/>
                                 <state key="normal" title="Button"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="button"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="xibStyleName" value="blueBackground"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QIC-vW-lX1" customClass="AppButton" customModule="AppFoundationExample" customModuleProvider="target">
@@ -74,10 +75,12 @@
                             <constraint firstItem="LSH-SK-qhB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HxG-fe-N2h"/>
                             <constraint firstItem="E9e-B9-x8o" firstAttribute="top" secondItem="QIC-vW-lX1" secondAttribute="bottom" constant="15" id="Lei-Wn-p76"/>
                             <constraint firstItem="LSH-SK-qhB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Nqg-Cy-J42"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="nFV-3k-sU7" secondAttribute="trailing" constant="30" id="Omq-tb-gfR"/>
                             <constraint firstItem="E9e-B9-x8o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TeL-No-6s8"/>
                             <constraint firstItem="nFV-3k-sU7" firstAttribute="top" secondItem="LSH-SK-qhB" secondAttribute="bottom" constant="15" id="oRM-3d-YYR"/>
                             <constraint firstItem="nFV-3k-sU7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rtb-qa-YeG"/>
                             <constraint firstItem="QIC-vW-lX1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tNq-tl-kyR"/>
+                            <constraint firstItem="nFV-3k-sU7" firstAttribute="leading" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="xCT-qe-KIf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -108,16 +111,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKi-TM-1IR">
-                                <rect key="frame" x="164.5" y="359" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKi-TM-1IR" customClass="AppButton" customModule="AppFoundationExample" customModuleProvider="target">
+                                <rect key="frame" x="50" y="359" width="275" height="30"/>
                                 <state key="normal" title="Button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="xibStyleName" value="blueBorder"/>
+                                </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="s5V-2b-swp" firstAttribute="centerY" secondItem="bUd-JI-NTu" secondAttribute="centerY" id="EJT-fy-rUl"/>
+                            <constraint firstItem="GKi-TM-1IR" firstAttribute="leading" relation="lessThanOrEqual" secondItem="sNY-v3-QaD" secondAttribute="leading" constant="50" id="F9B-Pa-Xuv"/>
                             <constraint firstItem="GKi-TM-1IR" firstAttribute="centerX" secondItem="bUd-JI-NTu" secondAttribute="centerX" id="OyE-aY-d1H"/>
                             <constraint firstItem="GKi-TM-1IR" firstAttribute="top" secondItem="s5V-2b-swp" secondAttribute="bottom" constant="15" id="RRC-CF-qkj"/>
+                            <constraint firstItem="sNY-v3-QaD" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="GKi-TM-1IR" secondAttribute="trailing" constant="50" id="cP3-7b-viG"/>
                             <constraint firstItem="s5V-2b-swp" firstAttribute="centerX" secondItem="bUd-JI-NTu" secondAttribute="centerX" id="wKL-e3-e24"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sNY-v3-QaD"/>
