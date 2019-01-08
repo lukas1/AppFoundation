@@ -14,7 +14,10 @@ open class StyledButton<S: ButtonStyles>: UIButton, StyledUIElement, XIBLocaliza
 
     @IBInspectable public var xibLocKey: String? {
         didSet {
-            setTitle(xibLocKey?.localized, for: .normal)
+            setTitle(
+                xibLocKey?.localized(usingBundleForInstance: self) ?? "",
+                for: .normal
+            )
         }
     }
 

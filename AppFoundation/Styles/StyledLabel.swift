@@ -14,7 +14,7 @@ open class StyledLabel<S: LabelStyles>: UILabel, StyledUIElement, XIBLocalizable
 
     @IBInspectable public var xibLocKey: String? {
         didSet {
-            text = xibLocKey?.localized
+            text = xibLocKey?.localized(usingBundleForInstance: self)
         }
     }
     
@@ -23,5 +23,11 @@ open class StyledLabel<S: LabelStyles>: UILabel, StyledUIElement, XIBLocalizable
             font = style.font
             textColor = style.color
         }
+    }
+
+    override open func layoutSubviews() {
+        super.layoutSubviews()
+        self.preferredMaxLayoutWidth = self.frame.size.width
+        self.layoutIfNeeded()
     }
 }
