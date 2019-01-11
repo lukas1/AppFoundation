@@ -11,7 +11,13 @@ struct ThirdViewModel {
 extension ThirdViewModel : ViewModel {
     func collectIntents(intents: ThirdIntents) -> CompositeDisposable {
         return CompositeDisposable(disposables: [
-            intents.buttonClicks.subscribe(onNext: { self.navigateBack() }),
+            intents.buttonClicks.subscribe(onNext: {
+                self.switchStoryboard(
+                    storyboardName: OtherStoryboard.name,
+                    viewControllerId: OtherStoryboard.viewControllerId
+                )
+            }),
+            intents.back.subscribe(onNext: { self.navigateBack() }),
             Single.just(thirdScreenText).subscribe(onSuccess: { self.state.onNext($0) })
         ])
     }

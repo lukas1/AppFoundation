@@ -9,6 +9,23 @@ public extension Coordinator {
         switch navigationEvent {
         case let .performSegue(segueIdentifier): viewController.performSegue(withIdentifier: segueIdentifier, sender: viewController)
         case let .pop(animated): viewController.navigationController?.popViewController(animated: animated)
+        case let .switchStoryboard(name, storyboardId):
+            let storyboard = UIStoryboard(name: name, bundle: nil)
+            let initialViewController = storyboard.instantiateViewController(
+                withIdentifier: storyboardId
+            ) as? UINavigationController
+            if let navigationController = initialViewController,
+                let rootViewController = navigationController.rootViewController
+            {
+                coordinator(for: rootViewController, sender: viewController)?.setup()
+                UIView.transition(
+                    with: UIApplication.shared.keyWindow!,
+                    duration: 0.25, options: .transitionCrossDissolve,
+                    animations: {
+                        UIApplication.shared.keyWindow?.rootViewController = navigationController
+                    }
+                )
+            }
         }
     }
 }

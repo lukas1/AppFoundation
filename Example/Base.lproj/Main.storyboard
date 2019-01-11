@@ -35,7 +35,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSH-SK-qhB" customClass="AppLabel" customModule="AppFoundationExample" customModuleProvider="target">
-                                <rect key="frame" x="157" y="318" width="61.5" height="31.5"/>
+                                <rect key="frame" x="166.5" y="323.5" width="42" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -44,7 +44,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFV-3k-sU7" customClass="AppButton" customModule="AppFoundationExample" customModuleProvider="target">
-                                <rect key="frame" x="30" y="364.5" width="315" height="51"/>
+                                <rect key="frame" x="30" y="359" width="315" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="button"/>
@@ -52,7 +52,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QIC-vW-lX1" customClass="AppButton" customModule="AppFoundationExample" customModuleProvider="target">
-                                <rect key="frame" x="140.5" y="94" width="94" height="44"/>
+                                <rect key="frame" x="159" y="94" width="57" height="30"/>
                                 <state key="normal" title="Random"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="xibStyleName" value="basic"/>
@@ -60,7 +60,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9e-B9-x8o" customClass="AppLabel" customModule="AppFoundationExample" customModuleProvider="target">
-                                <rect key="frame" x="181.5" y="153" width="12.5" height="24"/>
+                                <rect key="frame" x="182.5" y="139" width="10.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -69,13 +69,13 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Shows error if empty" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xrn-U7-jEj">
-                                <rect key="frame" x="16" y="218" width="343" height="30"/>
+                                <rect key="frame" x="16" y="223.5" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3iH-36-n5q">
-                                <rect key="frame" x="142" y="268" width="91" height="30"/>
+                                <rect key="frame" x="142" y="273.5" width="91" height="30"/>
                                 <state key="normal" title="Validate form"/>
                             </button>
                         </subviews>
@@ -172,8 +172,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jV-hJ-N5F">
-                                <rect key="frame" x="164.5" y="359" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="171.5" y="359" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ov5-S7-94R">
+                                <rect key="frame" x="170.5" y="404" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -181,11 +185,14 @@
                             <constraint firstItem="HkF-j1-89c" firstAttribute="centerX" secondItem="o1H-R8-ZVv" secondAttribute="centerX" id="M7F-7S-ycS"/>
                             <constraint firstItem="9jV-hJ-N5F" firstAttribute="centerX" secondItem="o1H-R8-ZVv" secondAttribute="centerX" id="MPY-D7-uvJ"/>
                             <constraint firstItem="9jV-hJ-N5F" firstAttribute="top" secondItem="HkF-j1-89c" secondAttribute="bottom" constant="15" id="VkX-Bn-fdz"/>
+                            <constraint firstItem="ov5-S7-94R" firstAttribute="centerX" secondItem="o1H-R8-ZVv" secondAttribute="centerX" id="maK-si-8la"/>
+                            <constraint firstItem="ov5-S7-94R" firstAttribute="top" secondItem="9jV-hJ-N5F" secondAttribute="bottom" constant="15" id="mbo-oJ-G2Z"/>
                             <constraint firstItem="HkF-j1-89c" firstAttribute="centerY" secondItem="o1H-R8-ZVv" secondAttribute="centerY" id="phu-09-LMF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zWq-M6-Lv7"/>
                     </view>
                     <connections>
+                        <outlet property="back" destination="ov5-S7-94R" id="kMR-aC-r0y"/>
                         <outlet property="button" destination="9jV-hJ-N5F" id="u2I-tT-V5h"/>
                         <outlet property="label" destination="HkF-j1-89c" id="r9c-la-7kB"/>
                     </connections>

@@ -27,6 +27,10 @@ public extension ViewModel {
     func navigateBack() {
         events.onNext(NavigationEvent.pop(true))
     }
+
+    func switchStoryboard(storyboardName: String, viewControllerId: String) {
+        events.onNext(NavigationEvent.switchStoryboard(storyboardName, viewControllerId))
+    }
 }
 
 public protocol ViewModelProvider {

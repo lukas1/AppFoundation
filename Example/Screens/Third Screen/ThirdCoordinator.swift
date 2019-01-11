@@ -13,4 +13,13 @@ struct ThirdCoordinator : VMMCoordinator {
 
 extension ThirdCoordinator : SegueHandler {
     func coordinator(for segue: UIStoryboardSegue, sender: Any?) -> Coordinator? { return nil }
+
+    func coordinator(for viewController: UIViewController, sender: Any?) -> Coordinator? {
+        switch viewController {
+        case is FourthViewController:
+            return (viewController as? FourthViewController).map { FourthCoordinator(viewController:$0) }
+        default:
+            return nil
+        }
+    }
 }

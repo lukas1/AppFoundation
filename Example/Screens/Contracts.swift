@@ -26,4 +26,18 @@ struct SecondIntents {
 
 struct ThirdIntents {
     let buttonClicks: Observable<Void>
+    let back: Observable<Void>
+}
+
+struct FourthIntents {
+    let next: Observable<Void>
+}
+
+struct FourthState {
+    var labelValue: String
+}
+
+enum OtherStoryboard {
+    static let name = "OtherStoryboard"
+    static let viewControllerId = "otherInitial"
 }
