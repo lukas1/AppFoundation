@@ -12,6 +12,7 @@
 		07774E4E21E88CEA00CEE0F2 /* NotEmptyValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07774E4D21E88CEA00CEE0F2 /* NotEmptyValidationRule.swift */; };
 		07774E5021E88DD100CEE0F2 /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07774E4F21E88DD100CEE0F2 /* Form.swift */; };
 		07774E5221E88E1200CEE0F2 /* FormScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07774E5121E88E1200CEE0F2 /* FormScreen.swift */; };
+		07774E5421E89ECB00CEE0F2 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07774E5321E89ECB00CEE0F2 /* Keyboard.swift */; };
 		07B9EA1B21C79F9600571897 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80450CD321B3D9CF00611C65 /* Dependencies.swift */; };
 		07B9EA1D21C7A15A00571897 /* Localizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B9EA1C21C7A15A00571897 /* Localizations.swift */; };
 		07B9EA2A21C7A30000571897 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07B9EA2C21C7A30000571897 /* Localizable.strings */; };
@@ -98,6 +99,7 @@
 		07774E4D21E88CEA00CEE0F2 /* NotEmptyValidationRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotEmptyValidationRule.swift; sourceTree = "<group>"; };
 		07774E4F21E88DD100CEE0F2 /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
 		07774E5121E88E1200CEE0F2 /* FormScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormScreen.swift; sourceTree = "<group>"; };
+		07774E5321E89ECB00CEE0F2 /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
 		07B9EA1C21C7A15A00571897 /* Localizations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizations.swift; sourceTree = "<group>"; };
 		07B9EA2D21C7A30300571897 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		07B9EA2E21C7A30C00571897 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 		07E22EC421C78F3400D2884E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				07774E5321E89ECB00CEE0F2 /* Keyboard.swift */,
 				07B9EA1C21C7A15A00571897 /* Localizations.swift */,
 				07E22EC521C78F3400D2884E /* StringConvertibleMembers.swift */,
 				0746DC7B21C7E8420052487F /* UIStoryBoardSegueExt.swift */,
@@ -464,6 +467,7 @@
 				07774E5021E88DD100CEE0F2 /* Form.swift in Sources */,
 				07E22EC121C78DF000D2884E /* StyledLabel.swift in Sources */,
 				07E22ECD21C7938A00D2884E /* StyledButton.swift in Sources */,
+				07774E5421E89ECB00CEE0F2 /* Keyboard.swift in Sources */,
 				07774E5221E88E1200CEE0F2 /* FormScreen.swift in Sources */,
 				80F8DB2D21BDC1630051900E /* UIViewController+Rx.swift in Sources */,
 				80F8DB2F21BDC1690051900E /* Weak.swift in Sources */,

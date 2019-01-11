@@ -15,6 +15,11 @@ final class FirstViewController: UIViewController {
     let disposeBag: DisposeBag = DisposeBag()
     var coordinator: Coordinator!
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        textField.dismissOnReturn()
+    }
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         textField.resignFirstResponder()
