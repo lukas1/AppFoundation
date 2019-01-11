@@ -52,7 +52,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QIC-vW-lX1" customClass="AppButton" customModule="AppFoundationExample" customModuleProvider="target">
-                                <rect key="frame" x="144.5" y="94" width="86" height="44"/>
+                                <rect key="frame" x="140.5" y="94" width="94" height="44"/>
                                 <state key="normal" title="Random"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="xibStyleName" value="basic"/>
@@ -68,15 +68,30 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="xibStyleName" value="subtitle"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Shows error if empty" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xrn-U7-jEj">
+                                <rect key="frame" x="16" y="218" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3iH-36-n5q">
+                                <rect key="frame" x="142" y="268" width="91" height="30"/>
+                                <state key="normal" title="Validate form"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="3iH-36-n5q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2LB-BJ-r3W"/>
                             <constraint firstItem="QIC-vW-lX1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="CgL-9t-wwQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xrn-U7-jEj" secondAttribute="trailing" constant="16" id="EvF-1E-tr1"/>
+                            <constraint firstItem="3iH-36-n5q" firstAttribute="top" secondItem="Xrn-U7-jEj" secondAttribute="bottom" constant="20" id="HLS-7p-soi"/>
                             <constraint firstItem="LSH-SK-qhB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HxG-fe-N2h"/>
                             <constraint firstItem="E9e-B9-x8o" firstAttribute="top" secondItem="QIC-vW-lX1" secondAttribute="bottom" constant="15" id="Lei-Wn-p76"/>
                             <constraint firstItem="LSH-SK-qhB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Nqg-Cy-J42"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="nFV-3k-sU7" secondAttribute="trailing" constant="30" id="Omq-tb-gfR"/>
+                            <constraint firstItem="Xrn-U7-jEj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Pr5-DO-VZR"/>
                             <constraint firstItem="E9e-B9-x8o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TeL-No-6s8"/>
+                            <constraint firstItem="LSH-SK-qhB" firstAttribute="top" secondItem="3iH-36-n5q" secondAttribute="bottom" constant="20" id="oAg-ZE-2YI"/>
                             <constraint firstItem="nFV-3k-sU7" firstAttribute="top" secondItem="LSH-SK-qhB" secondAttribute="bottom" constant="15" id="oRM-3d-YYR"/>
                             <constraint firstItem="nFV-3k-sU7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rtb-qa-YeG"/>
                             <constraint firstItem="QIC-vW-lX1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tNq-tl-kyR"/>
@@ -87,9 +102,11 @@
                     <navigationItem key="navigationItem" id="9sr-rq-BgS"/>
                     <connections>
                         <outlet property="button" destination="nFV-3k-sU7" id="5Ln-uF-Iah"/>
+                        <outlet property="formButton" destination="3iH-36-n5q" id="1HP-qP-OvZ"/>
                         <outlet property="random" destination="QIC-vW-lX1" id="n09-Cx-1h0"/>
                         <outlet property="randomLabel" destination="E9e-B9-x8o" id="qW1-Si-Jrm"/>
                         <outlet property="testLabel" destination="LSH-SK-qhB" id="OfK-bF-zV5"/>
+                        <outlet property="textField" destination="Xrn-U7-jEj" id="iyo-cv-fyO"/>
                         <segue destination="82C-qp-RZZ" kind="show" identifier="FirstSegue" id="aba-4q-4SC"/>
                     </connections>
                 </viewController>

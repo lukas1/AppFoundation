@@ -1,3 +1,4 @@
+import AppFoundation
 import RxSwift
 
 enum FirstCoordinatorSegues : String {
@@ -9,9 +10,10 @@ struct FirstState {
     var random: String
 }
 
-struct FirstIntents {
+struct FirstIntents: FormIntents {
     let buttonClicks: Observable<Void>
     let randomClicks: Observable<Void>
+    let submit: Observable<FormInput>
 }
 
 enum SecondCoordinatorSegues : String {

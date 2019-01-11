@@ -1,6 +1,10 @@
 import RxSwift
 import AppFoundation
 
+enum FormInputIds: Int {
+    case formInput
+}
+
 struct FirstViewModel {
     fileprivate let dependency: Dependency
     let events: PublishSubject<FoundationEvent> = PublishSubject<FoundationEvent>()
@@ -20,7 +24,21 @@ extension FirstViewModel : ViewModel {
                 .map { "\(Int.random(in: 0...10))" }
                 .subscribe(onNext: { random in
                     self.nextState { $0.random = random }
+                }),
+            intents.submit
+                .filter {
+                    $0.validate(
+                        validations: [
+                            FormInputIds.formInput.rawValue: [
+                                NotEmptyValidationRule(errorMessage: "Field cannot be empty")]
+                        ],
+                        observer: self.events
+                    )
+                }
+                .do(onNext: { _ in
+                    self.navigatePerformSegue(segueIdentifier: FirstCoordinatorSegues.first)
                 })
+                .subscribe()
         ])
     }
 }
