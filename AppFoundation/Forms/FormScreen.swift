@@ -1,7 +1,7 @@
 import RxCocoa
 import RxSwift
 
-public protocol FormScreen {
+public protocol FormScreen: AnyObject {
     var form: Form { get }
 }
 
@@ -15,6 +15,6 @@ public extension FormScreen {
     }
 
     public func submitObservable<T>(_ observable: Observable<T>) -> Observable<FormInput> {
-        return observable.map { _ in self.form }
+        return observable.map { [weak self] _ in self?.form ?? Form.empty }
     }
 }

@@ -20,6 +20,8 @@ extension Form: FormInput {
 }
 
 extension Form {
+    public static let empty: Form = Form(inputMap: [:], renderErrorForField: {_,_ in })
+
     public func renderErrors(errors: FormErrors) {
         errors.forEach { (key, value) in
             inputMap[key].map { renderErrorForField($0, value) }
