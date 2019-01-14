@@ -1,17 +1,18 @@
 import RxSwift
 import AppFoundation
+import RxCocoa
 
 struct SecondViewModel {
     fileprivate let dependency: SecDep
-    let events: PublishSubject<FoundationEvent> = PublishSubject<FoundationEvent>()
-    let state: BehaviorSubject<String> = BehaviorSubject<String>(value: "")
+    let events: PublishRelay<FoundationEvent> = PublishRelay<FoundationEvent>()
+    let state: BehaviorRelay<String> = BehaviorRelay<String>(value: "")
 }
 
 extension SecondViewModel : ViewModel {
     func collectIntents(intents: SecondIntents) -> CompositeDisposable {
         return CompositeDisposable(disposables: [
             intents.buttonClicks.subscribe(onNext: { self.navigatePerformSegue(segueIdentifier: SecondCoordinatorSegues.second) }),
-            Single.just(dependency.dependencyValue).subscribe(onSuccess: { self.state.onNext($0) })
+            Single.just(dependency.dependencyValue).subscribe(onSuccess: { self.state.accept($0) })
         ])
     }
 }

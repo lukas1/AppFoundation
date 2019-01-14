@@ -1,4 +1,5 @@
 import AppFoundation
+import RxCocoa
 import RxSwift
 
 enum FourthSegues: String {
@@ -6,8 +7,8 @@ enum FourthSegues: String {
 }
 
 struct FourthViewModel {
-    let events: PublishSubject<FoundationEvent> = PublishSubject<FoundationEvent>()
-    let state: BehaviorSubject<FourthState> = BehaviorSubject(value: FourthState(labelValue: "Fourth"))
+    let events: PublishRelay<FoundationEvent> = PublishRelay<FoundationEvent>()
+    let state: BehaviorRelay<FourthState> = BehaviorRelay(value: FourthState(labelValue: "Fourth"))
 }
 
 extension FourthViewModel: ViewModel {

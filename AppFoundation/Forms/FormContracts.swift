@@ -1,4 +1,5 @@
 import RxSwift
+import RxCocoa
 
 public typealias FormInputId = Int
 
@@ -26,9 +27,7 @@ public protocol FormInput {
 }
 
 public extension FormInput {
-    public func validate<O: ObserverType>(
-        validations: FormValidations, observer: O
-    ) -> Bool where O.E == FoundationEvent {
+    public func validate(validations: FormValidations, relay: PublishRelay<FoundationEvent>) -> Bool {
         do {
             let errors = validations.reduce([FormInputId: FormErrorMessage](), { result, touple in
                 var mutableResult = result
@@ -41,7 +40,7 @@ public extension FormInput {
                 return mutableResult
             })
             if !errors.isEmpty {
-                observer.onNext(FormErrorEvent(formErrors: errors))
+                relay.accept(FormErrorEvent(formErrors: errors))
             }
             return errors.isEmpty
         }

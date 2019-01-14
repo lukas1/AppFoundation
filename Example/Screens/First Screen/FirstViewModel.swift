@@ -1,5 +1,6 @@
 import RxSwift
 import AppFoundation
+import RxCocoa
 
 enum FormInputIds: Int {
     case formInput
@@ -7,14 +8,14 @@ enum FormInputIds: Int {
 
 struct FirstViewModel {
     fileprivate let dependency: Dependency
-    let events: PublishSubject<FoundationEvent> = PublishSubject<FoundationEvent>()
-    let state: BehaviorSubject<FirstState> = BehaviorSubject<FirstState>(value: FirstState(label: "", random: ""))
+    let events: PublishRelay<FoundationEvent> = PublishRelay<FoundationEvent>()
+    let state: BehaviorRelay<FirstState> = BehaviorRelay<FirstState>(value: FirstState(label: "", random: ""))
 }
 
 extension FirstViewModel : ViewModel {
     func collectIntents(intents: FirstIntents) -> CompositeDisposable {
         return CompositeDisposable(disposables: [
-            Single.just(try! state.value()).subscribe(onSuccess: { prevState in
+            Single.just(state.value).subscribe(onSuccess: { prevState in
                 self.nextState {
                     $0.label = self.dependency.dependencyValue
                 }
@@ -32,7 +33,7 @@ extension FirstViewModel : ViewModel {
                             FormInputIds.formInput.rawValue: [
                                 NotEmptyValidationRule(errorMessage: "Field cannot be empty")]
                         ],
-                        observer: self.events
+                        relay: self.events
                     )
                 }
                 .do(onNext: { _ in

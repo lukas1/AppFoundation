@@ -1,23 +1,24 @@
 import UIKit
+import RxCocoa
 import RxSwift
 
 public protocol ViewModel {
     associatedtype State
     associatedtype Intents
-    var events: PublishSubject<FoundationEvent> { get }
-    var state: BehaviorSubject<State> { get }
+    var events: PublishRelay<FoundationEvent> { get }
+    var state: BehaviorRelay<State> { get }
     func collectIntents(intents: Intents) -> CompositeDisposable
 }
 
 public extension ViewModel {
     func nextState(_ stateModification: (inout State) -> ()) {
-        var modifiableState = try! state.value()
+        var modifiableState = state.value
         stateModification(&modifiableState)
-        state.onNext(modifiableState)
+        state.accept(modifiableState)
     }
 
     func navigatePerformSegue<T: RawRepresentable>(segueIdentifier: T) where T.RawValue == String {
-        events.onNext(performSegueNavigationEvent(segueIdentifier))
+        events.accept(performSegueNavigationEvent(segueIdentifier))
     }
 
     fileprivate func performSegueNavigationEvent<T: RawRepresentable>(_ segueIdentifier: T) -> NavigationEvent where T.RawValue == String {
@@ -25,11 +26,11 @@ public extension ViewModel {
     }
 
     func navigateBack() {
-        events.onNext(NavigationEvent.pop(true))
+        events.accept(NavigationEvent.pop(true))
     }
 
     func switchStoryboard(storyboardName: String, viewControllerId: String) {
-        events.onNext(NavigationEvent.switchStoryboard(storyboardName, viewControllerId))
+        events.accept(NavigationEvent.switchStoryboard(storyboardName, viewControllerId))
     }
 }
 

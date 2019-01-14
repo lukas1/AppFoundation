@@ -1,11 +1,12 @@
 import UIKit
 import AppFoundation
 import RxSwift
+import RxCocoa
 
 struct ThirdViewModel {
     fileprivate let thirdScreenText: String
-    let events: PublishSubject<FoundationEvent> = PublishSubject<FoundationEvent>()
-    let state: BehaviorSubject<String> = BehaviorSubject<String>(value: "")
+    let events: PublishRelay<FoundationEvent> = PublishRelay<FoundationEvent>()
+    let state: BehaviorRelay<String> = BehaviorRelay<String>(value: "")
 }
 
 extension ThirdViewModel : ViewModel {
@@ -18,7 +19,7 @@ extension ThirdViewModel : ViewModel {
                 )
             }),
             intents.back.subscribe(onNext: { self.navigateBack() }),
-            Single.just(thirdScreenText).subscribe(onSuccess: { self.state.onNext($0) })
+            Single.just(thirdScreenText).subscribe(onSuccess: { self.state.accept($0) })
         ])
     }
 }
