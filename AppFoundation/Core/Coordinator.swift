@@ -1,3 +1,4 @@
+import RxSwift
 import UIKit
 
 public protocol Coordinator : SegueHandler, NavigationEventHandler {
@@ -45,6 +46,7 @@ public extension VMMCoordinator {
             .subscribe(onNext: { [weak myViewController, model] in
                 guard let vc = myViewController else { return }
                 model.events
+                    .observeOn(MainScheduler.instance)
                     .subscribe(onNext: { [weak myViewController] event in
                         if let navigation = event as? NavigationEvent {
                             myViewController.map { self.handleNavigationEvent(navigationEvent: navigation, viewController: $0) }
@@ -53,7 +55,9 @@ public extension VMMCoordinator {
                         }
                     })
                     .disposed(by: vc.disposeBag)
-                model.state.subscribe(onNext: { [weak myViewController] in myViewController?.render(state: $0) }).disposed(by: vc.disposeBag)
+                model.state
+                    .observeOn(MainScheduler.instance)
+                    .subscribe(onNext: { [weak myViewController] in myViewController?.render(state: $0) }).disposed(by: vc.disposeBag)
                 model.collectIntents(intents: vc.intents).disposed(by: vc.disposeBag)
             })
             .disposed(by: myViewController.disposeBag)

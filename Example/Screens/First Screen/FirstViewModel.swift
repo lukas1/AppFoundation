@@ -15,11 +15,13 @@ struct FirstViewModel {
 extension FirstViewModel : ViewModel {
     func collectIntents(intents: FirstIntents) -> CompositeDisposable {
         return CompositeDisposable(disposables: [
-            Single.just(state.value).subscribe(onSuccess: { prevState in
-                self.nextState {
-                    $0.label = self.dependency.dependencyValue
-                }
-            }),
+            Single.just(state.value)
+                .observeOn(ConcurrentDispatchQueueScheduler(qos: .default))
+                .subscribe(onSuccess: { prevState in
+                    self.nextState {
+                        $0.label = self.dependency.dependencyValue
+                    }
+                }),
             intents.buttonClicks.subscribe(onNext: { self.navigatePerformSegue(segueIdentifier: FirstCoordinatorSegues.first) }),
             intents.randomClicks
                 .map { "\(Int.random(in: 0...10))" }
