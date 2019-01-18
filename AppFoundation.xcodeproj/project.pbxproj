@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07292B3921F0DB0D006F0369 /* RxSchedulers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07292B3821F0DB0D006F0369 /* RxSchedulers.swift */; };
 		07346E6221E8F69B005DCF06 /* OtherStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07346E6121E8F69B005DCF06 /* OtherStoryboard.storyboard */; };
 		07346E6821E8F875005DCF06 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07346E6621E8F80E005DCF06 /* FourthViewController.swift */; };
 		07346E6A21E8F995005DCF06 /* FourthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07346E6921E8F995005DCF06 /* FourthViewModel.swift */; };
@@ -98,6 +99,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		07292B3821F0DB0D006F0369 /* RxSchedulers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSchedulers.swift; sourceTree = "<group>"; };
 		07346E6121E8F69B005DCF06 /* OtherStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OtherStoryboard.storyboard; sourceTree = "<group>"; };
 		07346E6621E8F80E005DCF06 /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		07346E6921E8F995005DCF06 /* FourthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewModel.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 			children = (
 				07774E5321E89ECB00CEE0F2 /* Keyboard.swift */,
 				07B9EA1C21C7A15A00571897 /* Localizations.swift */,
+				07292B3821F0DB0D006F0369 /* RxSchedulers.swift */,
 				07E22EC521C78F3400D2884E /* StringConvertibleMembers.swift */,
 				0746DC7B21C7E8420052487F /* UIStoryBoardSegueExt.swift */,
 			);
@@ -482,6 +485,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07292B3921F0DB0D006F0369 /* RxSchedulers.swift in Sources */,
 				80F8DB2A21BDC1590051900E /* Navigation.swift in Sources */,
 				80F8DB2B21BDC15C0051900E /* SwizzleUIViewController.swift in Sources */,
 				07774E4C21E88C6800CEE0F2 /* FormContracts.swift in Sources */,
