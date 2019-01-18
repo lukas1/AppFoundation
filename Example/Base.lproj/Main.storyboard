@@ -129,26 +129,49 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKi-TM-1IR" customClass="AppButton" customModule="AppFoundationExample" customModuleProvider="target">
-                                <rect key="frame" x="50" y="359" width="275" height="30"/>
+                                <rect key="frame" x="50" y="359" width="275" height="51"/>
                                 <state key="normal" title="Button"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="xibStyleName" value="blueBorder"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBa-UO-Bo4">
+                                <rect key="frame" x="145" y="430" width="85" height="30"/>
+                                <state key="normal" title="Loading Call"/>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZZ-zW-TX7">
+                                <rect key="frame" x="150" y="480" width="75" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8v3-GD-TCf">
+                                <rect key="frame" x="99" y="243" width="177" height="30"/>
+                                <state key="normal" title="Safe Async Call with Error"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="mBa-UO-Bo4" firstAttribute="top" secondItem="GKi-TM-1IR" secondAttribute="bottom" constant="20" id="69p-2C-pqA"/>
+                            <constraint firstItem="kZZ-zW-TX7" firstAttribute="centerX" secondItem="bUd-JI-NTu" secondAttribute="centerX" id="CWD-hM-obv"/>
                             <constraint firstItem="s5V-2b-swp" firstAttribute="centerY" secondItem="bUd-JI-NTu" secondAttribute="centerY" id="EJT-fy-rUl"/>
                             <constraint firstItem="GKi-TM-1IR" firstAttribute="leading" relation="lessThanOrEqual" secondItem="sNY-v3-QaD" secondAttribute="leading" constant="50" id="F9B-Pa-Xuv"/>
+                            <constraint firstItem="kZZ-zW-TX7" firstAttribute="top" secondItem="mBa-UO-Bo4" secondAttribute="bottom" constant="20" id="G8d-9p-Z8k"/>
+                            <constraint firstItem="mBa-UO-Bo4" firstAttribute="centerX" secondItem="bUd-JI-NTu" secondAttribute="centerX" id="Id1-ue-ctf"/>
                             <constraint firstItem="GKi-TM-1IR" firstAttribute="centerX" secondItem="bUd-JI-NTu" secondAttribute="centerX" id="OyE-aY-d1H"/>
                             <constraint firstItem="GKi-TM-1IR" firstAttribute="top" secondItem="s5V-2b-swp" secondAttribute="bottom" constant="15" id="RRC-CF-qkj"/>
                             <constraint firstItem="sNY-v3-QaD" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="GKi-TM-1IR" secondAttribute="trailing" constant="50" id="cP3-7b-viG"/>
+                            <constraint firstItem="s5V-2b-swp" firstAttribute="top" secondItem="8v3-GD-TCf" secondAttribute="bottom" constant="50" id="hSQ-g6-2p5"/>
+                            <constraint firstItem="8v3-GD-TCf" firstAttribute="centerX" secondItem="bUd-JI-NTu" secondAttribute="centerX" id="uV9-dX-h6v"/>
                             <constraint firstItem="s5V-2b-swp" firstAttribute="centerX" secondItem="bUd-JI-NTu" secondAttribute="centerX" id="wKL-e3-e24"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sNY-v3-QaD"/>
                     </view>
                     <connections>
                         <outlet property="button" destination="GKi-TM-1IR" id="E5d-sF-xom"/>
+                        <outlet property="loadingCallButton" destination="mBa-UO-Bo4" id="Pdn-oj-17a"/>
+                        <outlet property="loadingLabel" destination="kZZ-zW-TX7" id="Dpf-OR-NGu"/>
+                        <outlet property="safeAsyncCallButton" destination="8v3-GD-TCf" id="T8q-fx-syz"/>
                         <outlet property="testLabel" destination="s5V-2b-swp" id="VY9-Jf-Rsf"/>
                         <segue destination="QUu-cy-L0d" kind="show" identifier="SecondSegue" id="mjp-Ms-cAt"/>
                     </connections>

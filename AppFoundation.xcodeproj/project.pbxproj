@@ -10,6 +10,7 @@
 		07292B3521F0BC7B006F0369 /* AsyncCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07292B3421F0BC7B006F0369 /* AsyncCall.swift */; };
 		07292B3721F0D0F3006F0369 /* SupportsLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07292B3621F0D0F3006F0369 /* SupportsLoading.swift */; };
 		07292B3921F0DB0D006F0369 /* RxSchedulers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07292B3821F0DB0D006F0369 /* RxSchedulers.swift */; };
+		07292B3E21F1C0C1006F0369 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07292B3D21F1C0C1006F0369 /* Errors.swift */; };
 		07346E6221E8F69B005DCF06 /* OtherStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07346E6121E8F69B005DCF06 /* OtherStoryboard.storyboard */; };
 		07346E6821E8F875005DCF06 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07346E6621E8F80E005DCF06 /* FourthViewController.swift */; };
 		07346E6A21E8F995005DCF06 /* FourthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07346E6921E8F995005DCF06 /* FourthViewModel.swift */; };
@@ -104,6 +105,7 @@
 		07292B3421F0BC7B006F0369 /* AsyncCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncCall.swift; sourceTree = "<group>"; };
 		07292B3621F0D0F3006F0369 /* SupportsLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportsLoading.swift; sourceTree = "<group>"; };
 		07292B3821F0DB0D006F0369 /* RxSchedulers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSchedulers.swift; sourceTree = "<group>"; };
+		07292B3D21F1C0C1006F0369 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		07346E6121E8F69B005DCF06 /* OtherStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OtherStoryboard.storyboard; sourceTree = "<group>"; };
 		07346E6621E8F80E005DCF06 /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		07346E6921E8F995005DCF06 /* FourthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewModel.swift; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 			children = (
 				80F8DB0A21BD98600051900E /* Contracts.swift */,
 				80450CD321B3D9CF00611C65 /* Dependencies.swift */,
+				07292B3D21F1C0C1006F0369 /* Errors.swift */,
 				07E22EC721C78FBE00D2884E /* Styles.swift */,
 				80F8DB1021BDA3670051900E /* First Screen */,
 				80F8DB1121BDA3790051900E /* Second Screen */,
@@ -489,6 +492,7 @@
 				07346E6821E8F875005DCF06 /* FourthViewController.swift in Sources */,
 				80F8DB0F21BDA2ED0051900E /* SecondCoordinator.swift in Sources */,
 				80F8DB1421BDA3A90051900E /* ThirdViewModel.swift in Sources */,
+				07292B3E21F1C0C1006F0369 /* Errors.swift in Sources */,
 				80B6A81421986270003E868C /* AppDelegate.swift in Sources */,
 				07346E6C21E8FB64005DCF06 /* FourthCoordinator.swift in Sources */,
 				07346E6A21E8F995005DCF06 /* FourthViewModel.swift in Sources */,

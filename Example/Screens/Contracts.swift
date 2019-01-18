@@ -1,4 +1,5 @@
 import AppFoundation
+import RxCocoa
 import RxSwift
 
 enum FirstCoordinatorSegues : String {
@@ -22,6 +23,8 @@ enum SecondCoordinatorSegues : String {
 
 struct SecondIntents {
     let buttonClicks: Observable<Void>
+    let loadingCallClicks: Driver<Void>
+    let safeAsyncClicks: Driver<Void>
 }
 
 struct ThirdIntents {
