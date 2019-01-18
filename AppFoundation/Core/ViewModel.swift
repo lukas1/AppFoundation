@@ -57,4 +57,4 @@ public extension Screen {
 
 public protocol FoundationEvent {}
 
-public struct None : FoundationEvent {}
+public struct None : FoundationEvent, Equatable {}

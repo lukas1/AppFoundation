@@ -9,7 +9,7 @@ public typealias FormErrors = [FormInputId: FormErrorMessage]
 
 public typealias FormValidations = [FormInputId: [FormValidationRule]]
 
-public struct FormErrorEvent: FoundationEvent {
+public struct FormErrorEvent: FoundationEvent, Equatable {
     public let formErrors: FormErrors
     
     public init (formErrors: FormErrors) {

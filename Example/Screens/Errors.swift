@@ -2,7 +2,7 @@ import AppFoundation
 import RxCocoa
 import RxSwift
 
-struct ErrorEvent: FoundationEvent {
+struct ErrorEvent: FoundationEvent, Equatable {
     let message: String
 }
 

@@ -1,8 +1,12 @@
 import RxSwift
 import RxCocoa
 
-struct LoadingCallStarted: FoundationEvent {}
-struct LoadingCallEnded: FoundationEvent {}
+public struct LoadingCallStarted: FoundationEvent, Equatable {
+    public init() {}
+}
+public struct LoadingCallEnded: FoundationEvent, Equatable {
+    public init() {}
+}
 
 public typealias PerformsDefaultErrorHandling = (Error) -> Bool
 
