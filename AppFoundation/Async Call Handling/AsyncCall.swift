@@ -16,8 +16,8 @@ public extension PrimitiveSequence where Trait == SingleTrait {
             .do(
                 onSuccess: nil,
                 onError: nil,
-                onSubscribe: nil,
-                onSubscribed: { events.accept(LoadingCallStarted()) },
+                onSubscribe: { events.accept(LoadingCallStarted()) },
+                onSubscribed: nil,
                 onDispose: { events.accept(LoadingCallEnded()) }
         )
     }
