@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0713E0DB21F7122B007A4D16 /* AnyEquatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0713E0DA21F7122B007A4D16 /* AnyEquatable.swift */; };
 		07292B3521F0BC7B006F0369 /* AsyncCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07292B3421F0BC7B006F0369 /* AsyncCall.swift */; };
 		07292B3721F0D0F3006F0369 /* SupportsLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07292B3621F0D0F3006F0369 /* SupportsLoading.swift */; };
 		07292B3921F0DB0D006F0369 /* RxSchedulers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07292B3821F0DB0D006F0369 /* RxSchedulers.swift */; };
@@ -102,6 +103,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0713E0DA21F7122B007A4D16 /* AnyEquatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyEquatable.swift; sourceTree = "<group>"; };
 		07292B3421F0BC7B006F0369 /* AsyncCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncCall.swift; sourceTree = "<group>"; };
 		07292B3621F0D0F3006F0369 /* SupportsLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportsLoading.swift; sourceTree = "<group>"; };
 		07292B3821F0DB0D006F0369 /* RxSchedulers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSchedulers.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 		071EED8421BF9C010079AEEB /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				0713E0DA21F7122B007A4D16 /* AnyEquatable.swift */,
 				80450CD521B3E06800611C65 /* Coordinator.swift */,
 				8031C15121BCF99D0066394B /* Exceptions.swift */,
 				806114B621BC65090025A598 /* Navigation.swift */,
@@ -524,6 +527,7 @@
 				07B9EA1D21C7A15A00571897 /* Localizations.swift in Sources */,
 				80F8DB2E21BDC1660051900E /* ViewModel.swift in Sources */,
 				0746DC7C21C7E8420052487F /* UIStoryBoardSegueExt.swift in Sources */,
+				0713E0DB21F7122B007A4D16 /* AnyEquatable.swift in Sources */,
 				07E22EC321C78E1000D2884E /* Styles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

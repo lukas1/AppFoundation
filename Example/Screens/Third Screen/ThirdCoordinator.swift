@@ -23,3 +23,5 @@ extension ThirdCoordinator : SegueHandler {
         }
     }
 }
+
+extension String: IsAnyEquatable {}

@@ -8,7 +8,10 @@ public protocol Coordinator : SegueHandler, NavigationEventHandler {
 public extension Coordinator {
     func handleNavigationEvent(navigationEvent: NavigationEvent, viewController: UIViewController) {
         switch navigationEvent {
-        case let .performSegue(segueIdentifier): viewController.performSegue(withIdentifier: segueIdentifier, sender: viewController)
+        case let .performSegue(segueIdentifier, parameter):
+            viewController.performSegue(
+                withIdentifier: segueIdentifier, sender: parameter ?? viewController
+            )
         case let .pop(animated): viewController.navigationController?.popViewController(animated: animated)
         case let .switchStoryboard(name, storyboardId):
             let storyboard = UIStoryboard(name: name, bundle: nil)

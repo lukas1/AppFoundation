@@ -13,7 +13,12 @@ extension SecondViewModel : ViewModel {
         let asyncSingle = Single.just(())
             .delay(5, scheduler: Schedulers.defaultConcurrentScheduler)
         return CompositeDisposable(disposables: [
-            intents.buttonClicks.subscribe(onNext: { self.navigatePerformSegue(segueIdentifier: SecondCoordinatorSegues.second) }),
+            intents.buttonClicks.subscribe(onNext: {
+                self.navigatePerformSegue(
+                    segueIdentifier: SecondCoordinatorSegues.second,
+                    parameter: "From Parameter".asAnyEquatable()
+                )
+            }),
             intents.loadingCallClicks
                 .flatMap { _ in
                     asyncSingle

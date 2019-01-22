@@ -17,12 +17,18 @@ public extension ViewModel {
         state.accept(modifiableState)
     }
 
-    func navigatePerformSegue<T: RawRepresentable>(segueIdentifier: T) where T.RawValue == String {
-        events.accept(performSegueNavigationEvent(segueIdentifier))
+    func navigatePerformSegue<T: RawRepresentable>(
+        segueIdentifier: T,
+        parameter: AnyEquatable? = nil
+    ) where T.RawValue == String {
+        events.accept(performSegueNavigationEvent(segueIdentifier, parameter: parameter))
     }
 
-    fileprivate func performSegueNavigationEvent<T: RawRepresentable>(_ segueIdentifier: T) -> NavigationEvent where T.RawValue == String {
-        return NavigationEvent.performSegue(segueIdentifier.rawValue)
+    fileprivate func performSegueNavigationEvent<T: RawRepresentable>(
+        _ segueIdentifier: T,
+        parameter: AnyEquatable?
+    ) -> NavigationEvent where T.RawValue == String {
+        return NavigationEvent.performSegue(segueIdentifier.rawValue, parameter)
     }
 
     func navigateBack() {

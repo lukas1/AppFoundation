@@ -21,7 +21,7 @@ public protocol PrepareForSegue {
 }
 
 public enum NavigationEvent: FoundationEvent, Equatable {
-    case performSegue(String) // identifier
+    case performSegue(String, AnyEquatable?) // identifier
     case pop(Bool) // animated
     case switchStoryboard(String, String) // storyboard name, ViewController's storyboard ID
 }
