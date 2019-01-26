@@ -16,8 +16,10 @@ extension ThirdCoordinator : SegueHandler {
 
     func coordinator(for viewController: UIViewController, sender: Any?) -> Coordinator? {
         switch viewController {
-        case is FourthViewController:
-            return (viewController as? FourthViewController).map { FourthCoordinator(viewController:$0) }
+        case is UINavigationController:
+            return ((viewController as? UINavigationController)?
+                .rootViewController as? FourthViewController
+            ).map { FourthCoordinator(viewController: $0) }
         default:
             return nil
         }
