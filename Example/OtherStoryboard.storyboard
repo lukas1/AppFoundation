@@ -28,26 +28,62 @@
                                 <rect key="frame" x="171.5" y="359" width="32" height="30"/>
                                 <state key="normal" title="Next"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXZ-E3-e13">
+                                <rect key="frame" x="161" y="263" width="53" height="30"/>
+                                <state key="normal" title="Present"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Po2-pC-urL" firstAttribute="centerY" secondItem="PiM-8V-gbK" secondAttribute="centerY" id="8EB-cg-8wx"/>
                             <constraint firstItem="Po2-pC-urL" firstAttribute="centerX" secondItem="PiM-8V-gbK" secondAttribute="centerX" id="8a3-vZ-xD1"/>
                             <constraint firstItem="AwV-LB-fA7" firstAttribute="top" secondItem="Po2-pC-urL" secondAttribute="bottom" constant="15" id="cZV-8t-ayv"/>
+                            <constraint firstItem="Po2-pC-urL" firstAttribute="top" secondItem="uXZ-E3-e13" secondAttribute="bottom" constant="30" id="dbb-nk-nRQ"/>
+                            <constraint firstItem="uXZ-E3-e13" firstAttribute="centerX" secondItem="PiM-8V-gbK" secondAttribute="centerX" id="hZF-TF-W6U"/>
                             <constraint firstItem="AwV-LB-fA7" firstAttribute="centerX" secondItem="PiM-8V-gbK" secondAttribute="centerX" id="mVi-Dl-G7t"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bZb-Z3-hrK"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ubc-TR-7Sl"/>
                     <connections>
-                        <outlet property="backButton" destination="AwV-LB-fA7" id="FEz-LO-WoQ"/>
                         <outlet property="label" destination="Po2-pC-urL" id="EE3-WS-iSU"/>
+                        <outlet property="nextButton" destination="AwV-LB-fA7" id="U1V-cO-6wJ"/>
+                        <outlet property="presentButton" destination="uXZ-E3-e13" id="3Rp-bK-Er7"/>
                         <segue destination="OAP-Uq-CLc" kind="show" identifier="nextScreen" id="gEj-OL-Y1U"/>
+                        <segue destination="hxn-hC-UWP" kind="presentation" identifier="modal" id="GTS-8p-n8h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wnq-Hh-1cH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="40.799999999999997" y="26.53673163418291"/>
+        </scene>
+        <!--Fifth View Controller-->
+        <scene sceneID="EFi-ei-tvP">
+            <objects>
+                <viewController id="hxn-hC-UWP" customClass="FifthViewController" customModule="AppFoundationExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R5D-JC-hXf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLz-OZ-Wbx">
+                                <rect key="frame" x="160.5" y="318.5" width="54" height="30"/>
+                                <state key="normal" title="Dismiss"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lLz-OZ-Wbx" firstAttribute="centerX" secondItem="R5D-JC-hXf" secondAttribute="centerX" id="O5E-aO-uRd"/>
+                            <constraint firstItem="lLz-OZ-Wbx" firstAttribute="centerY" secondItem="R5D-JC-hXf" secondAttribute="centerY" id="ipH-KZ-8Ho"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hFX-xu-Ar9"/>
+                    </view>
+                    <connections>
+                        <outlet property="dismissButton" destination="lLz-OZ-Wbx" id="FyC-z7-g3j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EMC-t7-HsB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="41" y="788"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="XbZ-Pd-9Y0">

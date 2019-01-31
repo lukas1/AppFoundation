@@ -19,23 +19,27 @@ public extension ViewModel {
 
     func navigatePerformSegue<T: RawRepresentable>(
         segueIdentifier: T,
-        parameter: AnyEquatable? = nil
-    ) where T.RawValue == String {
+        parameter: SegueParameter? = nil
+    ) where T.RawValue == SegueIdentifier {
         events.accept(performSegueNavigationEvent(segueIdentifier, parameter: parameter))
     }
 
     fileprivate func performSegueNavigationEvent<T: RawRepresentable>(
         _ segueIdentifier: T,
-        parameter: AnyEquatable?
-    ) -> NavigationEvent where T.RawValue == String {
+        parameter: SegueParameter?
+    ) -> NavigationEvent where T.RawValue == SegueIdentifier {
         return NavigationEvent.performSegue(segueIdentifier.rawValue, parameter)
     }
 
-    func navigateBack() {
-        events.accept(NavigationEvent.pop(true))
+    func dismiss(animated: Animated = true) {
+        events.accept(NavigationEvent.dismiss(animated))
     }
 
-    func switchStoryboard(storyboardName: String, viewControllerId: String) {
+    func navigateBack(animated: Animated = true) {
+        events.accept(NavigationEvent.pop(animated))
+    }
+
+    func switchStoryboard(storyboardName: StoryboardName, viewControllerId: ViewControllerId) {
         events.accept(NavigationEvent.switchStoryboard(storyboardName, viewControllerId))
     }
 }

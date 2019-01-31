@@ -20,10 +20,17 @@ public protocol PrepareForSegue {
     var segueHandler: SegueHandler? { get }
 }
 
+public typealias Animated = Bool
+public typealias SegueIdentifier = String
+public typealias SegueParameter = AnyEquatable
+public typealias StoryboardName = String
+public typealias ViewControllerId = String
+
 public enum NavigationEvent: FoundationEvent, Equatable {
-    case performSegue(String, AnyEquatable?) // identifier
-    case pop(Bool) // animated
-    case switchStoryboard(String, String) // storyboard name, ViewController's storyboard ID
+    case performSegue(SegueIdentifier, SegueParameter?)
+    case dismiss(Animated)
+    case pop(Animated)
+    case switchStoryboard(StoryboardName, ViewControllerId)
 }
 
 public protocol NavigationEventHandler {

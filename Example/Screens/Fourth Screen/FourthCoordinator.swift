@@ -10,7 +10,11 @@ struct FourthCoordinator: VMMCoordinator {
 
 extension FourthCoordinator: SegueHandler {
     func coordinator(for segue: UIStoryboardSegue, sender: Any?) -> Coordinator? {
-        return nil
+        switch segue.identifier {
+        case FourthSegues.modal.rawValue:
+            return FifthCoordinator(viewController: segue.destination())
+        default: return nil
+        }
     }
 }
 

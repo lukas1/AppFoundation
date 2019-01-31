@@ -34,6 +34,7 @@ struct ThirdIntents {
 
 struct FourthIntents {
     let next: Observable<Void>
+    let present: Driver<Void>
 }
 
 struct FourthState {
@@ -43,4 +44,8 @@ struct FourthState {
 enum OtherStoryboard {
     static let name = "OtherStoryboard"
     static let viewControllerId = "otherInitial"
+}
+
+struct FifthIntents {
+    let dismiss: Driver<Void>
 }

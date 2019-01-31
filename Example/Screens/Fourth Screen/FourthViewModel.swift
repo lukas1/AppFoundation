@@ -4,6 +4,7 @@ import RxSwift
 
 enum FourthSegues: String {
     case nextScreen
+    case modal
 }
 
 struct FourthViewModel {
@@ -19,7 +20,10 @@ extension FourthViewModel: ViewModel {
             }),
             intents.next.subscribe(onNext: {
                 self.navigatePerformSegue(segueIdentifier: FourthSegues.nextScreen)
-            })
+            }),
+            intents.present
+                .do(onNext: { self.navigatePerformSegue(segueIdentifier: FourthSegues.modal) })
+                .drive()
         ])
     }
 }
