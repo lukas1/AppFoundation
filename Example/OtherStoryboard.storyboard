@@ -69,9 +69,15 @@
                                 <rect key="frame" x="160.5" y="318.5" width="54" height="30"/>
                                 <state key="normal" title="Dismiss"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsv-R4-nsi">
+                                <rect key="frame" x="119.5" y="368.5" width="136" height="30"/>
+                                <state key="normal" title="Dismiss With Result"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="rsv-R4-nsi" firstAttribute="centerX" secondItem="R5D-JC-hXf" secondAttribute="centerX" id="6Qq-9p-gNg"/>
+                            <constraint firstItem="rsv-R4-nsi" firstAttribute="top" secondItem="lLz-OZ-Wbx" secondAttribute="bottom" constant="20" id="J3n-GO-WR0"/>
                             <constraint firstItem="lLz-OZ-Wbx" firstAttribute="centerX" secondItem="R5D-JC-hXf" secondAttribute="centerX" id="O5E-aO-uRd"/>
                             <constraint firstItem="lLz-OZ-Wbx" firstAttribute="centerY" secondItem="R5D-JC-hXf" secondAttribute="centerY" id="ipH-KZ-8Ho"/>
                         </constraints>
@@ -79,6 +85,7 @@
                     </view>
                     <connections>
                         <outlet property="dismissButton" destination="lLz-OZ-Wbx" id="FyC-z7-g3j"/>
+                        <outlet property="dismissWithResultButton" destination="rsv-R4-nsi" id="nzp-oS-gRz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EMC-t7-HsB" userLabel="First Responder" sceneMemberID="firstResponder"/>

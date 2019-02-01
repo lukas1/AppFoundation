@@ -20,5 +20,3 @@ extension ThirdCoordinator : SegueHandler {
         return FourthCoordinator(viewController: destination)
     }
 }
-
-extension String: IsAnyEquatable {}

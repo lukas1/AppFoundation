@@ -12,6 +12,9 @@ extension FifthViewModel: ViewModel {
         return CompositeDisposable(disposables: [
             intents.dismiss
                 .do(onNext: { self.dismiss() })
+                .drive(),
+            intents.dismissWithResult
+                .do(onNext: { self.dismissReturningResult(animated: true, result: "fith dismissed") })
                 .drive()
         ])
     }

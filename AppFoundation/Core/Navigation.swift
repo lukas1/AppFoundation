@@ -8,6 +8,10 @@ public protocol SegueHandler {
 
 public extension SegueHandler {
     func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let resultListener = segue.source as? ResultListener {
+            (segue.destination as? ResultProviderViewController)?
+                .resultListener = resultListener
+        }
         coordinator(for: segue, sender: sender)?.setup()
     }
 
@@ -29,6 +33,7 @@ public typealias ViewControllerId = String
 public enum NavigationEvent: FoundationEvent, Equatable {
     case performSegue(SegueIdentifier, SegueParameter?)
     case dismiss(Animated)
+    case dismissWithResult(Animated, SegueParameter)
     case pop(Animated)
     case switchStoryboard(StoryboardName, ViewControllerId)
 }

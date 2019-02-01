@@ -2,6 +2,8 @@ import AppFoundation
 import RxCocoa
 import RxSwift
 
+extension String: IsAnyEquatable {}
+
 enum FirstCoordinatorSegues : String {
     case first = "FirstSegue"
 }
@@ -35,6 +37,7 @@ struct ThirdIntents {
 struct FourthIntents {
     let next: Observable<Void>
     let present: Driver<Void>
+    let result: Single<String>
 }
 
 struct FourthState {
@@ -48,4 +51,5 @@ enum OtherStoryboard {
 
 struct FifthIntents {
     let dismiss: Driver<Void>
+    let dismissWithResult: Driver<Void>
 }

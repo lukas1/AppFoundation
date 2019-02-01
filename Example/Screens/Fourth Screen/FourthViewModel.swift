@@ -22,7 +22,17 @@ extension FourthViewModel: ViewModel {
                 self.navigatePerformSegue(segueIdentifier: FourthSegues.nextScreen)
             }),
             intents.present
-                .do(onNext: { self.navigatePerformSegue(segueIdentifier: FourthSegues.modal) })
+                .flatMap { _ in
+                    self.navigatePerformSegueForResult(
+                        resultObservable: intents.result, segueIdentifier: FourthSegues.modal
+                    ).do(onSuccess: { value in
+                        self.nextState { newState in
+                            newState.labelValue = "Result: \(value)"
+                        }
+                    })
+                    .map { _ in () }
+                    .asDriver(onErrorJustReturn: ())
+                }
                 .drive()
         ])
     }

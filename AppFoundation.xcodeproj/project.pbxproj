@@ -20,6 +20,7 @@
 		074A81F02202E07B00C4302D /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074A81EF2202E07B00C4302D /* FifthViewController.swift */; };
 		074A81F22202E08A00C4302D /* FifthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074A81F12202E08A00C4302D /* FifthCoordinator.swift */; };
 		074A81F42202E09300C4302D /* FifthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074A81F32202E09300C4302D /* FifthViewModel.swift */; };
+		074A81F822032BB700C4302D /* Navigation+Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074A81F722032BB700C4302D /* Navigation+Result.swift */; };
 		07774E4C21E88C6800CEE0F2 /* FormContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07774E4B21E88C6800CEE0F2 /* FormContracts.swift */; };
 		07774E4E21E88CEA00CEE0F2 /* NotEmptyValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07774E4D21E88CEA00CEE0F2 /* NotEmptyValidationRule.swift */; };
 		07774E5021E88DD100CEE0F2 /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07774E4F21E88DD100CEE0F2 /* Form.swift */; };
@@ -119,6 +120,7 @@
 		074A81EF2202E07B00C4302D /* FifthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
 		074A81F12202E08A00C4302D /* FifthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthCoordinator.swift; sourceTree = "<group>"; };
 		074A81F32202E09300C4302D /* FifthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthViewModel.swift; sourceTree = "<group>"; };
+		074A81F722032BB700C4302D /* Navigation+Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Navigation+Result.swift"; sourceTree = "<group>"; };
 		07774E4B21E88C6800CEE0F2 /* FormContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormContracts.swift; sourceTree = "<group>"; };
 		07774E4D21E88CEA00CEE0F2 /* NotEmptyValidationRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotEmptyValidationRule.swift; sourceTree = "<group>"; };
 		07774E4F21E88DD100CEE0F2 /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				80450CD521B3E06800611C65 /* Coordinator.swift */,
 				8031C15121BCF99D0066394B /* Exceptions.swift */,
 				806114B621BC65090025A598 /* Navigation.swift */,
+				074A81F722032BB700C4302D /* Navigation+Result.swift */,
 				806114B421BBFB1F0025A598 /* SwizzleUIViewController.swift */,
 				806114B221BBF1800025A598 /* UINavigationViewController+RootViewController.swift */,
 				8031C14F21BCF67F0066394B /* UIViewController+Rx.swift */,
@@ -546,6 +549,7 @@
 				80F8DB2921BDC1560051900E /* Exceptions.swift in Sources */,
 				07B9EA1D21C7A15A00571897 /* Localizations.swift in Sources */,
 				80F8DB2E21BDC1660051900E /* ViewModel.swift in Sources */,
+				074A81F822032BB700C4302D /* Navigation+Result.swift in Sources */,
 				0746DC7C21C7E8420052487F /* UIStoryBoardSegueExt.swift in Sources */,
 				0713E0DB21F7122B007A4D16 /* AnyEquatable.swift in Sources */,
 				07E22EC321C78E1000D2884E /* Styles.swift in Sources */,

@@ -13,6 +13,12 @@ public extension Coordinator {
                 withIdentifier: segueIdentifier, sender: parameter ?? viewController
             )
         case let .dismiss(animated): viewController.dismiss(animated: animated)
+        case let .dismissWithResult(animated, result):
+            viewController.dismiss(animated: animated) {
+                (viewController as? ResultProviderViewController)?
+                    .resultListener
+                    .publishResult(result)
+            }
         case let .pop(animated): viewController.navigationController?.popViewController(animated: animated)
         case let .switchStoryboard(name, storyboardId):
             let storyboard = UIStoryboard(name: name, bundle: nil)
