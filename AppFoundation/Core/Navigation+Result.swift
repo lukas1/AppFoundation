@@ -11,7 +11,7 @@ public extension ResultListener {
         return Single.create { [weak self] single in
             self?.resultEvent = single
             return Disposables.create()
-        }.do(onDispose: { [weak self] in self?.resultEvent = nil })
+        }
     }
 
     func publishResult(_ result: AnyEquatable) {
