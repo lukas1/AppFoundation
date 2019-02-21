@@ -39,8 +39,14 @@ public extension ViewModel {
         events.accept(NavigationEvent.pop(animated))
     }
 
-    func switchStoryboard(storyboardName: StoryboardName, viewControllerId: ViewControllerId) {
-        events.accept(NavigationEvent.switchStoryboard(storyboardName, viewControllerId))
+    func switchStoryboard(
+        storyboardName: StoryboardName,
+        viewControllerId: ViewControllerId,
+        parameter: SegueParameter? = nil
+    ) {
+        events.accept(
+            NavigationEvent.switchStoryboard(storyboardName, viewControllerId, parameter)
+        )
     }
 }
 

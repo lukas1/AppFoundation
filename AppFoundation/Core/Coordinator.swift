@@ -20,12 +20,12 @@ public extension Coordinator {
                     .publishResult(result)
             }
         case let .pop(animated): viewController.navigationController?.popViewController(animated: animated)
-        case let .switchStoryboard(name, storyboardId):
+        case let .switchStoryboard(name, storyboardId, parameter):
             let storyboard = UIStoryboard(name: name, bundle: nil)
             let initialViewController = storyboard.instantiateViewController(
                 withIdentifier: storyboardId
             )
-            coordinator(for: initialViewController, sender: viewController)?.setup()
+            coordinator(for: initialViewController, sender: parameter ?? viewController)?.setup()
             UIView.transition(
                 with: UIApplication.shared.keyWindow!,
                 duration: 0.25, options: .transitionCrossDissolve,
