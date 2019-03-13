@@ -35,8 +35,8 @@ public extension ViewModel {
         events.accept(NavigationEvent.dismiss(animated))
     }
 
-    func navigateBack(animated: Animated = true) {
-        events.accept(NavigationEvent.pop(animated))
+    func navigateBack(animated: Animated = true, popDepth: PopDepth = 1) {
+        events.accept(NavigationEvent.pop(animated, popDepth))
     }
 
     func switchStoryboard(

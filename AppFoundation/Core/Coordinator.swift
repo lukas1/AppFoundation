@@ -19,7 +19,11 @@ public extension Coordinator {
                     .resultListener
                     .publishResult(result)
             }
-        case let .pop(animated): viewController.navigationController?.popViewController(animated: animated)
+        case let .pop(animated, popDepth):
+            guard let popTo = viewController
+                .navigationController?.viewControllers.suffix(popDepth + 1).first
+            else { return }
+            viewController.navigationController?.popToViewController(popTo, animated: animated)
         case let .switchStoryboard(name, storyboardId, parameter):
             let storyboard = UIStoryboard(name: name, bundle: nil)
             let initialViewController = storyboard.instantiateViewController(

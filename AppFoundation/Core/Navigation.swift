@@ -25,6 +25,7 @@ public protocol PrepareForSegue {
 }
 
 public typealias Animated = Bool
+public typealias PopDepth = Int
 public typealias SegueIdentifier = String
 public typealias SegueParameter = AnyEquatable
 public typealias StoryboardName = String
@@ -34,7 +35,7 @@ public enum NavigationEvent: FoundationEvent, Equatable {
     case performSegue(SegueIdentifier, SegueParameter?)
     case dismiss(Animated)
     case dismissWithResult(Animated, SegueParameter)
-    case pop(Animated)
+    case pop(Animated, PopDepth)
     case switchStoryboard(StoryboardName, ViewControllerId, SegueParameter?)
 }
 
