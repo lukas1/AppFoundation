@@ -19,6 +19,7 @@ extension ThirdViewModel : ViewModel {
                 )
             }),
             intents.back.subscribe(onNext: { self.navigateBack() }),
+            intents.back2.subscribe(onNext: { self.navigateBack(popDepth: 2) }),
             Single.just(thirdScreenText).subscribe(onSuccess: { self.state.accept($0) })
         ])
     }

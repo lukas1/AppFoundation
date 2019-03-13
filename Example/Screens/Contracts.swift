@@ -32,6 +32,7 @@ struct SecondIntents {
 struct ThirdIntents {
     let buttonClicks: Observable<Void>
     let back: Observable<Void>
+    let back2: Observable<Void>
 }
 
 struct FourthIntents {
