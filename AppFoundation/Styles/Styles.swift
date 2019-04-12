@@ -13,11 +13,19 @@ public protocol ButtonStyles: StringConvertibleMembers {
 public struct LabelStyle {
     public let color: UIColor
     public let font: UIFont
+    public let customStyle: CustomStyle
 
-    public init(color: UIColor, font: UIFont) {
+    public init(color: UIColor, font: UIFont, customStyle: CustomStyle = CustomStyles.empty) {
         self.color = color
         self.font = font
+        self.customStyle = customStyle
     }
+}
+
+public protocol CustomStyle {}
+
+public enum CustomStyles: CustomStyle {
+    case empty
 }
 
 public struct ButtonStyle {
@@ -28,6 +36,7 @@ public struct ButtonStyle {
     public let cornerRadius: CGFloat
     public let borderWidth: CGFloat
     public let borderColor: UIColor?
+    public let customStyle: CustomStyle
 
     public init(
         color: UIColor,
@@ -36,7 +45,8 @@ public struct ButtonStyle {
         backgroundColor: UIColor? = nil,
         cornerRadius: CGFloat = 0.0,
         borderWidth: CGFloat = 1.0,
-        borderColor: UIColor? = nil
+        borderColor: UIColor? = nil,
+        customStyle: CustomStyle = CustomStyles.empty
     ) {
         self.color = color
         self.font = font
@@ -45,5 +55,6 @@ public struct ButtonStyle {
         self.cornerRadius = cornerRadius
         self.borderWidth = borderWidth
         self.borderColor = borderColor
+        self.customStyle = customStyle
     }
 }

@@ -1,6 +1,6 @@
 @IBDesignable
 open class StyledButton<S: ButtonStyles>: UIButton, StyledUIElement, XIBLocalizable {
-    private var style: ButtonStyle? {
+    public var style: ButtonStyle? {
         didSet {
             updateStyle()
         }
@@ -32,6 +32,9 @@ open class StyledButton<S: ButtonStyles>: UIButton, StyledUIElement, XIBLocaliza
                 layer.borderWidth = style.borderWidth
                 layer.borderColor = borderColor.cgColor
             }
+            updateCustomStyle(style: style.customStyle)
         }
     }
+
+    open func updateCustomStyle(style: CustomStyle) {}
 }

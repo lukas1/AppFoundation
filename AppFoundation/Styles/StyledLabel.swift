@@ -1,6 +1,6 @@
 @IBDesignable
 open class StyledLabel<S: LabelStyles>: UILabel, StyledUIElement, XIBLocalizable {
-    private var style: LabelStyle? {
+    public var style: LabelStyle? {
         didSet {
             updateStyle()
         }
@@ -22,8 +22,11 @@ open class StyledLabel<S: LabelStyles>: UILabel, StyledUIElement, XIBLocalizable
         if let style = style {
             font = style.font
             textColor = style.color
+            updateCustomStyle(style: style.customStyle)
         }
     }
+
+    open func updateCustomStyle(style: CustomStyle) {}
 
     override open func layoutSubviews() {
         super.layoutSubviews()
