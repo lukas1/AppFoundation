@@ -21,6 +21,7 @@
 		074A81F22202E08A00C4302D /* FifthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074A81F12202E08A00C4302D /* FifthCoordinator.swift */; };
 		074A81F42202E09300C4302D /* FifthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074A81F32202E09300C4302D /* FifthViewModel.swift */; };
 		074A81F822032BB700C4302D /* Navigation+Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074A81F722032BB700C4302D /* Navigation+Result.swift */; };
+		075904EB2271BCEA00D2F02E /* BooleanValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075904EA2271BCEA00D2F02E /* BooleanValidationRule.swift */; };
 		07774E4C21E88C6800CEE0F2 /* FormContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07774E4B21E88C6800CEE0F2 /* FormContracts.swift */; };
 		07774E4E21E88CEA00CEE0F2 /* NotEmptyValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07774E4D21E88CEA00CEE0F2 /* NotEmptyValidationRule.swift */; };
 		07774E5021E88DD100CEE0F2 /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07774E4F21E88DD100CEE0F2 /* Form.swift */; };
@@ -117,6 +118,7 @@
 		074A81F12202E08A00C4302D /* FifthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthCoordinator.swift; sourceTree = "<group>"; };
 		074A81F32202E09300C4302D /* FifthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthViewModel.swift; sourceTree = "<group>"; };
 		074A81F722032BB700C4302D /* Navigation+Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Navigation+Result.swift"; sourceTree = "<group>"; };
+		075904EA2271BCEA00D2F02E /* BooleanValidationRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooleanValidationRule.swift; sourceTree = "<group>"; };
 		07774E4B21E88C6800CEE0F2 /* FormContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormContracts.swift; sourceTree = "<group>"; };
 		07774E4D21E88CEA00CEE0F2 /* NotEmptyValidationRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotEmptyValidationRule.swift; sourceTree = "<group>"; };
 		07774E4F21E88DD100CEE0F2 /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 		07774E4A21E88C5300CEE0F2 /* Forms */ = {
 			isa = PBXGroup;
 			children = (
+				075904EA2271BCEA00D2F02E /* BooleanValidationRule.swift */,
 				07774E4F21E88DD100CEE0F2 /* Form.swift */,
 				07774E4B21E88C6800CEE0F2 /* FormContracts.swift */,
 				07774E5121E88E1200CEE0F2 /* FormScreen.swift */,
@@ -520,6 +523,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07292B3521F0BC7B006F0369 /* AsyncCall.swift in Sources */,
+				075904EB2271BCEA00D2F02E /* BooleanValidationRule.swift in Sources */,
 				07292B3921F0DB0D006F0369 /* RxSchedulers.swift in Sources */,
 				80F8DB2A21BDC1590051900E /* Navigation.swift in Sources */,
 				80F8DB2B21BDC15C0051900E /* SwizzleUIViewController.swift in Sources */,
