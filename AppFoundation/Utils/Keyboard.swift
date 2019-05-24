@@ -1,5 +1,5 @@
 public extension UITextField {
-    public func dismissOnReturn() {
+    func dismissOnReturn() {
         addTarget(self, action: #selector(dismiss(_:)), for: .editingDidEndOnExit)
     }
 

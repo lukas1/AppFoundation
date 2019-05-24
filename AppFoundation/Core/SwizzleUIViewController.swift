@@ -9,7 +9,7 @@ fileprivate let swizzling: (UIViewController.Type) -> () = { viewController in
 
 public extension UIViewController {
     
-    public static func swizzle() throws {
+    static func swizzle() throws {
         guard self === UIViewController.self else { throw CoreExceptions.errorUnexpected("Calling swizzle() only allowed on UIViewController. Calling from \(self).") }
         swizzling(self)
     }

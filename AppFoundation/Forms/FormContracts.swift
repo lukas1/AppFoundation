@@ -27,7 +27,7 @@ public protocol FormInput {
 }
 
 public extension FormInput {
-    public func validate(validations: FormValidations, relay: PublishRelay<FoundationEvent>) -> Bool {
+    func validate(validations: FormValidations, relay: PublishRelay<FoundationEvent>) -> Bool {
         do {
             let errors = validations.reduce([FormInputId: FormErrorMessage](), { result, touple in
                 var mutableResult = result

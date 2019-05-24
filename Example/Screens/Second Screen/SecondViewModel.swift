@@ -11,7 +11,7 @@ struct SecondViewModel {
 extension SecondViewModel : ViewModel {
     func collectIntents(intents: SecondIntents) -> CompositeDisposable {
         let asyncSingle = Single.just(())
-            .delay(5, scheduler: Schedulers.defaultConcurrentScheduler)
+            .delay(.seconds(5), scheduler: Schedulers.defaultConcurrentScheduler)
         return CompositeDisposable(disposables: [
             intents.buttonClicks.subscribe(onNext: {
                 self.navigatePerformSegue(
