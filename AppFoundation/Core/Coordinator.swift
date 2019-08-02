@@ -30,12 +30,11 @@ public extension Coordinator {
                 withIdentifier: storyboardId
             )
             coordinator(for: initialViewController, sender: parameter ?? viewController)?.setup()
+            UIApplication.shared.keyWindow?.rootViewController = initialViewController
             UIView.transition(
                 with: UIApplication.shared.keyWindow!,
                 duration: 0.25, options: .transitionCrossDissolve,
-                animations: {
-                    UIApplication.shared.keyWindow?.rootViewController = initialViewController
-                }
+                animations: nil
             )
         }
     }
