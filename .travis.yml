@@ -1,0 +1,22 @@
+language: objective-c
+osx_image: xcode10.2
+cache:
+  directories:
+  - Carthage
+before_install:
+- brew update
+- brew outdated carthage || brew upgrade carthage
+before_script:
+- carthage bootstrap --platform iOS --cache-builds
+script:
+- carthage build --no-skip-current --platform iOS
+- carthage archive
+deploy:
+  skip_cleanup: true
+  provider: releases
+  api_key:
+    secure: vVLYELC1jIuKvRZxX+DYa1m8W3a1Uy35pF/2nFBCuAiRl/xA8mjT2UtdrwIPrgrXIMyblckYWxKZWvBPE06NQX8ogVDcS8jhI4clw0CZGifa2i3G5l25YgcqRSxBg3zNa/Vhmv/yStC5ec0YZJgfHO4gzkb/HDepJI3xdzzPljfUUTGObxi4Yblwtj7DpU8q1mWi60cZrc7DbeXuB11gUGa1xstW8/+H/Yukcawt1gUTO7KAXAtcjbQQg4dcvUM104zvSJvgsLfE6cx3FgL6OwhhKtVE7yK71dgKTd0Q1rSVUFC3OWY4zjoGPIoqp5XKH/ETzlzAun32RTDJ/ZQVHLv8+j9VaIR+0VbGoQUFhpLHegHRuPaHFqo7xl3GhEUWUuXp+xc8BN9yfsEHQ9HVLtd+mxNeNO2cuGFBpkwmDhHkwITKpMKJ394i3A/KxQIlI9lgWvi8wcz6lVzOaRvn0FA7E05cvc/7onpgU9E/eE8DilcVKVJuu0cCv+0iObvZQi/GIEazVWWfXxTGuUZtBhsUcd49iRIg9JXLt9jyAf+j9RxFElUaOxrjtI8wkmyi9igZ4S2FUPjVdAQUa9K/GaXxO21D6af7ZEnPi078di0XLZ90Kx7arhARjxAu7zzFNrhGhEqBcyersC/QSSrJ/JJdcVSdHGQLsefw+GmjoPs=
+  file: AppFoundation.framework.zip
+  on:
+    repo: lukas1/AppFoundation
+    tags: true
