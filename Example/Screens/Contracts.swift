@@ -54,3 +54,7 @@ struct FifthIntents {
     let dismiss: Driver<Void>
     let dismissWithResult: Driver<Void>
 }
+
+struct SixthIntents {
+    let popWithResult: Driver<Void>
+}

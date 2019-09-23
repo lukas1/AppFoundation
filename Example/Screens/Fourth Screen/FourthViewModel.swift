@@ -18,9 +18,15 @@ extension FourthViewModel: ViewModel {
             Observable.just("Fourth state").subscribe(onNext: { value in
                 self.nextState { oldState in oldState.labelValue = value }
             }),
-            intents.next.subscribe(onNext: {
-                self.navigatePerformSegue(segueIdentifier: FourthSegues.nextScreen)
-            }),
+            intents.next.flatMap { _ in
+                self.navigatePerformSegueForResult(
+                    resultObservable: intents.result, segueIdentifier: FourthSegues.nextScreen
+                ).do(onSuccess: { value in
+                    self.nextState { newState in
+                        newState.labelValue = "Result: \(value)"
+                    }
+                })
+            }.subscribe(),
             intents.present
                 .flatMap { _ in
                     self.navigatePerformSegueForResult(

@@ -13,6 +13,8 @@ extension FourthCoordinator: SegueHandler {
         switch segue.identifier {
         case FourthSegues.modal.rawValue:
             return FifthCoordinator(viewController: segue.destination())
+        case FourthSegues.nextScreen.rawValue:
+            return SixthCoordinator(viewController: segue.destination())
         default: return nil
         }
     }

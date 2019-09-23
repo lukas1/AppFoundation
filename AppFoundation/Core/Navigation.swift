@@ -36,6 +36,7 @@ public enum NavigationEvent: FoundationEvent, Equatable {
     case dismiss(Animated)
     case dismissWithResult(Animated, SegueParameter)
     case pop(Animated, PopDepth)
+    case popWithResult(Animated, SegueParameter)
     case switchStoryboard(StoryboardName, ViewControllerId, SegueParameter?)
 }
 

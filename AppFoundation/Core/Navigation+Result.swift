@@ -45,4 +45,8 @@ public extension ViewModel {
     func dismissReturningResult<T: IsAnyEquatable & Equatable>(animated: Animated, result: T) {
         events.accept(NavigationEvent.dismissWithResult(animated, result.asAnyEquatable()))
     }
+
+    func popReturningResult<T: IsAnyEquatable & Equatable>(animated: Animated, result: T) {
+        events.accept(NavigationEvent.popWithResult(animated, result.asAnyEquatable()))
+    }
 }

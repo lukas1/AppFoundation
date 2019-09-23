@@ -35,6 +35,9 @@
 		07E22EC621C78F3400D2884E /* StringConvertibleMembers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E22EC521C78F3400D2884E /* StringConvertibleMembers.swift */; };
 		07E22EC921C78FFA00D2884E /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E22EC721C78FBE00D2884E /* Styles.swift */; };
 		07E22ECD21C7938A00D2884E /* StyledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E22ECC21C7938A00D2884E /* StyledButton.swift */; };
+		07E49AE72338A40600DFF5F8 /* SixthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E49AE62338A40600DFF5F8 /* SixthCoordinator.swift */; };
+		07E49AE92338A43F00DFF5F8 /* SixthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E49AE82338A43F00DFF5F8 /* SixthViewController.swift */; };
+		07E49AEB2338A47500DFF5F8 /* SixthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E49AEA2338A47500DFF5F8 /* SixthViewModel.swift */; };
 		07F380E2228AC15800800A81 /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07F380E1228AC15800800A81 /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		80450CCC21B3CF5100611C65 /* FirstViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80450CCB21B3CF5100611C65 /* FirstViewModel.swift */; };
 		80450CD821B45E8000611C65 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80450CD721B45E8000611C65 /* SecondViewController.swift */; };
@@ -133,6 +136,9 @@
 		07E22EC521C78F3400D2884E /* StringConvertibleMembers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringConvertibleMembers.swift; sourceTree = "<group>"; };
 		07E22EC721C78FBE00D2884E /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		07E22ECC21C7938A00D2884E /* StyledButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyledButton.swift; sourceTree = "<group>"; };
+		07E49AE62338A40600DFF5F8 /* SixthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixthCoordinator.swift; sourceTree = "<group>"; };
+		07E49AE82338A43F00DFF5F8 /* SixthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixthViewController.swift; sourceTree = "<group>"; };
+		07E49AEA2338A47500DFF5F8 /* SixthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixthViewModel.swift; sourceTree = "<group>"; };
 		07F380E1228AC15800800A81 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		8031C14F21BCF67F0066394B /* UIViewController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
 		8031C15121BCF99D0066394B /* Exceptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exceptions.swift; sourceTree = "<group>"; };
@@ -276,6 +282,16 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		07E49AE52338A3C500DFF5F8 /* Sixth Screen */ = {
+			isa = PBXGroup;
+			children = (
+				07E49AE62338A40600DFF5F8 /* SixthCoordinator.swift */,
+				07E49AE82338A43F00DFF5F8 /* SixthViewController.swift */,
+				07E49AEA2338A47500DFF5F8 /* SixthViewModel.swift */,
+			);
+			path = "Sixth Screen";
+			sourceTree = "<group>";
+		};
 		80450CCA21B3CD2A00611C65 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +304,7 @@
 				80F8DB1221BDA38C0051900E /* Third Screen */,
 				07346E6321E8F6D8005DCF06 /* Fourth Screen */,
 				074A81EE2202E05500C4302D /* Fifth Screen */,
+				07E49AE52338A3C500DFF5F8 /* Sixth Screen */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -512,10 +529,13 @@
 				074A81F42202E09300C4302D /* FifthViewModel.swift in Sources */,
 				80F8DB0F21BDA2ED0051900E /* SecondCoordinator.swift in Sources */,
 				074A81F22202E08A00C4302D /* FifthCoordinator.swift in Sources */,
+				07E49AE92338A43F00DFF5F8 /* SixthViewController.swift in Sources */,
+				07E49AE72338A40600DFF5F8 /* SixthCoordinator.swift in Sources */,
 				80F8DB1421BDA3A90051900E /* ThirdViewModel.swift in Sources */,
 				07292B3E21F1C0C1006F0369 /* Errors.swift in Sources */,
 				80B6A81421986270003E868C /* AppDelegate.swift in Sources */,
 				07346E6C21E8FB64005DCF06 /* FourthCoordinator.swift in Sources */,
+				07E49AEB2338A47500DFF5F8 /* SixthViewModel.swift in Sources */,
 				07346E6A21E8F995005DCF06 /* FourthViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
